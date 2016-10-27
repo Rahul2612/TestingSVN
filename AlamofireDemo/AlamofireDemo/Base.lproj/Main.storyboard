@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MWU-mu-mCq">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="wxI-AB-uWh">
+            <objects>
+                <navigationController id="MWU-mu-mCq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YAz-a6-KbX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="H6K-Bh-r8k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LZ5-DP-pHw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1297" y="18"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AlamofireDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gd4-xN-gJG">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="TFN-XM-7qm"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="oO0-O6-IJK"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Gd4-xN-gJG" secondAttribute="bottom" id="TnG-wF-Rni"/>
+                            <constraint firstAttribute="trailing" secondItem="Gd4-xN-gJG" secondAttribute="trailing" id="aEw-5Z-aKG"/>
+                            <constraint firstItem="Gd4-xN-gJG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rxw-hP-2pg"/>
+                            <constraint firstItem="Gd4-xN-gJG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="uQ5-Ad-Itx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rwf-3F-r1g"/>
+                    <connections>
+                        <outlet property="tbl" destination="Gd4-xN-gJG" id="LBF-g2-UrN"/>
+                        <segue destination="hDc-48-bcS" kind="push" identifier="StateVC" id="VbP-WC-WR6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-463.19999999999999" y="1.3493253373313345"/>
+        </scene>
+        <!--StateVC-->
+        <scene sceneID="aum-g0-jP1">
+            <objects>
+                <viewController storyboardIdentifier="StateVC" id="hDc-48-bcS" customClass="StateVC" customModule="AlamofireDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bFo-Ty-0sG"/>
+                        <viewControllerLayoutGuide type="bottom" id="foy-L1-K8X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lBm-6g-SQT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gP0-CM-gge">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gP0-CM-gge" secondAttribute="trailing" id="Bhr-bG-ayv"/>
+                            <constraint firstItem="gP0-CM-gge" firstAttribute="top" secondItem="bFo-Ty-0sG" secondAttribute="bottom" constant="44" id="IR3-eg-cGg"/>
+                            <constraint firstItem="foy-L1-K8X" firstAttribute="top" secondItem="gP0-CM-gge" secondAttribute="bottom" id="MWa-vU-6xX"/>
+                            <constraint firstItem="gP0-CM-gge" firstAttribute="leading" secondItem="lBm-6g-SQT" secondAttribute="leading" id="lUV-fe-4Uw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="WE6-VS-kF8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JvM-dM-5XU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="445.60000000000002" y="7.6461769115442282"/>
+        </scene>
+    </scenes>
+</document>
